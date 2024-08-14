@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20231 - Web Programming - Practice / Emoji App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&display=swap" rel="stylesheet">
+    <script src="js/modules/main.js" type="module"></script>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class=""><!-- add/remove "has-overlay" CSS class to show/hide emoji detail view -->
+
+    <article class="wrapper">
+
+        <header class="header">
+            <div class="header__logo">
+                <h1 class="title">😅 EmojiApp</h1>
+            </div>
+
+            <div class="header__search">
+
+                <div class="searchbox js-searchbox">
+                    <div class="searchbox__content">
+                        <input class="field field--search js-search-input" type="text"
+                            placeholder="Search for words...">
+                        <button class="btn btn--search js-search-btn">Search</button>
+                        <svg class="field__icon" xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                            viewBox="0 0 512 512">
+                            <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none"
+                                stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+                                stroke-width="32" d="M338.29 338.29L448 448" />
+                        </svg>
+                    </div>
+                    <p class="searchbox__feedback js-search-feedback">The searched word couldn't be empty.</p>
+                </div>
+
+                <a class="link link--favs link--white js-favourites" >Favourites</a>
+            </div>
+        </header>
+
+        <section class="container">
+
+            <aside class="sidebar">
+                <div class="categories">
+                    <p class="label">CATEGORIES</p>
+                    <ul class="category-list js-category-list">
+                    </ul>
+                </div>
+
+            </aside>
+
+            <main class="results js-results" id="resultsgroups">
+
+                <div class="grouping js-groups" id="cosas">
+                    <p class="label" id="namegrp">GROUPS</p>
+                    <ul class="pillbar js-group-list">
+
+                    </ul>
+                </div>
+
+                <h2 class="results__title"> </h2>
+
+                <ul class="results__list js-results-list">
+                </ul>
+
+            </main>
+
+        </section>
+
+    </article>
+
+
+    <article class="detail js-detail">
+        <!-- add/remove additional CSS "detail--show" class for show/hide emoji detail view -->
+
+        <header class="detail__header">
+            <div class="detail__header-actions">
+                <a class="detail__close link js-detail-close" href="#">
+                    <span class="link__label">Close</span>
+                    <span class="icon link__icon">
+                        <img src="img/ico-close-outline.svg" alt="Close detail">
+                    </span>
+                </a>
+                <a href="#" class="detail__addfav link js-detail-fav" data-emoji="">
+                    <span class="icon link__icon">
+                        <img class="js-detail-fav-icon" src="img/ico-fav-outline.svg" alt="Add to favs">
+                    </span>
+                    <span class="link__label js-detail-fav-label">Add to favs</span>
+                </a>
+            </div>
+
+            <h2 class="detail__title">
+                <span class="detail__title-emoji js-detail-emoji">&#128646;</span>
+                <span class="detail__title-name js-detail-name">train</span>
+            </h2>
+
+            <p class="detail__title-fullname js-detail-fullname">train</p>
+
+        </header>
+
+        <h3 class="detail__subtitle">Additional information</h3>
+
+        <!-- Sample information for emoji detail modal -->
+        <section class="detail__datasheet js-detail-list">
+
+            <div class="detail__datasheet-row">
+                <p class="detail__datasheet-label">Category</p>
+                <p class="detail__datasheet-data js-detail-category">travel and places</p>
+            </div>
+
+            <div class="detail__datasheet-row">
+                <p class="detail__datasheet-label">Group</p>
+                <p class="detail__datasheet-data js-detail-group">travel and places</p>
+            </div>
+
+            <div class="detail__datasheet-row">
+                <p class="detail__datasheet-label">HTML codes</p>
+                <p class="detail__datasheet-data js-detail-htmlcodes">
+                    <!-- take into account an emoji could have more than one html code -->
+                    <span class="detail__datasheet-code">&#128646;</span>
+                </p>
+            </div>
+
+            <div class="detail__datasheet-row">
+                <p class="detail__datasheet-label">Unicode codes</p>
+                <p class="detail__datasheet-data js-detail-unicodes">
+                    <!-- take into account an emoji could have more than one unicode code -->
+                    <span class="detail__datasheet-code">U+1F686</span>
+                </p>
+            </div>
+
+        </section>
+
+    </article>
+
+</body>
+
+</html>
